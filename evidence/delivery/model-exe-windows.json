@@ -1,0 +1,31 @@
+{
+  "status": "verified",
+  "platform": "Windows x64",
+  "workflow_url": "https://github.com/ityongsheng/m09-private-backup/actions/runs/44996354530",
+  "release_url": "https://github.com/ityongsheng/m09-private-backup/releases/tag/model-exe-6",
+  "asset_url": "https://github.com/ityongsheng/m09-private-backup/releases/download/model-exe-6/m09-model-runner-windows.zip",
+  "asset_name": "m09-model-runner-windows.zip",
+  "asset_size_bytes": 196462612,
+  "contents": [
+    "m09-model-runner.exe",
+    "weighted_xgboost.joblib",
+    "smoke.json",
+    "sha256.json",
+    "MANIFEST.txt"
+  ],
+  "executable_sha256": "188AF7DCC3976533D6833B5D15D313D2C33747F0C24209BFAEEE6028B0676E5D",
+  "pe_inspection": "PE32+ executable (console) x86-64, for MS Windows",
+  "smoke": {
+    "input": {
+      "fruit": "Tomato",
+      "temp": 30,
+      "humid": 95,
+      "light": 10,
+      "co2": 900
+    },
+    "label": "Bad",
+    "riskProbability": 0.67811358,
+    "modelVersion": "weighted-xgboost-mi-v1"
+  },
+  "scope_note": "仅发布模型运行器 EXE；未制作全应用 Windows x64 离线包。"
+}

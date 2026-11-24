@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "date": "2026-11-22",
+  "platform": "macOS arm64",
+  "hadoop_version": "3.5.0",
+  "java_version": "17.0.21.1",
+  "mode": "single-node pseudo-distributed HDFS",
+  "namenode": "hdfs://localhost:9000",
+  "hdfs_root": "/m09/cold-storage",
+  "source_rows": 10995,
+  "cleaned_rows": 10995,
+  "raw_sha256": "218f76f061a12b0a38c55107e5be3b377e9eecb33f1a1840ef2b4e4618a5e5aa",
+  "hdfs_roundtrip_raw_sha256": "218f76f061a12b0a38c55107e5be3b377e9eecb33f1a1840ef2b4e4618a5e5aa",
+  "cleaned_sha256": "718710ad28386d6cc122097b2f9d9419407f113dda291bea4193376df42c91fb",
+  "live_datanodes": 1,
+  "hdfs_objects": [
+    "/m09/cold-storage/raw/Dataset.csv",
+    "/m09/cold-storage/processed/cleaned_dataset.csv",
+    "/m09/cold-storage/processed/schema.json",
+    "/m09/cold-storage/processed/cleaning_report.json"
+  ],
+  "evidence_dir": "evidence/hadoop/run"
+}

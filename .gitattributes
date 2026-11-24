@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.csv -text
+*.png binary
+*.docx binary
+*.joblib binary
+# Preserve the original evidence bytes and hashes, including CRLF output.
+evidence/hadoop/run/* -text

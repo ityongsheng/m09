@@ -1,0 +1,48 @@
+name: Build model runner executable
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'ml/**'
+      - 'data/processed/**'
+      - 'artifacts/model/**'
+      - 'requirements-model.txt'
+      - 'scripts/build_model_exe.ps1'
+      - '.github/workflows/build-model-exe.yml'
+
+jobs:
+  windows-model-exe:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install model dependencies
+        shell: pwsh
+        run: python -m pip install --upgrade pip; pip install -r requirements-model.txt pyinstaller
+      - name: Rebuild and package model
+        shell: pwsh
+        run: |
+          python -m ml.cli train --input data/processed/cleaned_dataset.csv --model artifacts/model/weighted_xgboost.joblib --metrics evidence/models/metrics-windows.json
+          ./scripts/build_model_exe.ps1
+          New-Item -ItemType Directory -Force -Path dist/model-package | Out-Null
+          Copy-Item dist/windows-model-exe/m09-model-runner.exe dist/model-package/
+          Copy-Item artifacts/model/weighted_xgboost.joblib dist/model-package/
+          $env:M09_MODEL_PATH = (Resolve-Path dist/model-package/weighted_xgboost.joblib)
+          $input = '{"fruit":"Tomato","temp":30,"humid":95,"light":10,"co2":900}'
+          $input | & dist/model-package/m09-model-runner.exe | Tee-Object dist/model-package/smoke.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-FileHash dist/model-package/m09-model-runner.exe -Algorithm SHA256 | ConvertTo-Json | Set-Content dist/model-package/sha256.json
+          @('m09-model-runner.exe','weighted_xgboost.joblib','smoke.json','sha256.json') | Set-Content dist/model-package/MANIFEST.txt
+      - name: Publish model EXE release asset
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Compress-Archive -Path dist/model-package/* -DestinationPath dist/m09-model-runner-windows.zip -Force
+          $tag = "model-exe-${{ github.run_number }}"
+          gh release create $tag dist/m09-model-runner-windows.zip --title "m09 model runner $tag" --notes "Windows x64 PyInstaller model runner. This release contains the executable, trained model, smoke output, and SHA256 manifest." --target $env:GITHUB_SHA

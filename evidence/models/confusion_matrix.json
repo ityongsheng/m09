@@ -1,0 +1,25 @@
+{
+  "model": "weighted-xgboost-mi-v1",
+  "random_state": 20261122,
+  "test_rows": 2199,
+  "labels": [
+    "Good",
+    "Bad"
+  ],
+  "matrix": [
+    [
+      1130,
+      3
+    ],
+    [
+      0,
+      1066
+    ]
+  ],
+  "counts": {
+    "TN": 1130,
+    "FP": 3,
+    "FN": 0,
+    "TP": 1066
+  }
+}

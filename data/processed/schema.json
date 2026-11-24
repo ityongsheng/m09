@@ -1,0 +1,46 @@
+{
+  "dataset_type": "tabular_sensor_records",
+  "has_timestamp": false,
+  "columns": [
+    {
+      "name": "fruit",
+      "type": "categorical"
+    },
+    {
+      "name": "temp",
+      "type": "float",
+      "unit": "C"
+    },
+    {
+      "name": "humid",
+      "type": "float",
+      "unit": "%"
+    },
+    {
+      "name": "light",
+      "type": "float",
+      "unit": "lux"
+    },
+    {
+      "name": "co2",
+      "type": "float",
+      "unit": "ppm"
+    },
+    {
+      "name": "label",
+      "type": "int",
+      "values": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "label_name",
+      "type": "categorical",
+      "values": [
+        "Good",
+        "Bad"
+      ]
+    }
+  ]
+}

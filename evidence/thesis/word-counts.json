@@ -1,0 +1,18 @@
+{
+  "body_paragraph_nonspace": 14709,
+  "body_table_and_caption_nonspace": 1291,
+  "body_combined_nonspace": 16000,
+  "abstracts_nonspace": 1494,
+  "references_nonspace": 3334,
+  "acknowledgments_nonspace": 208,
+  "appendix_nonspace": 720,
+  "total_count_regions_nonspace": 21756,
+  "docx": "thesis/毕业设计说明书_m09_v1.0.docx",
+  "renderer": "LibreOffice 26.8.0.0.alpha0 via fontconfig alias 宋体/黑体 -> PingFang SC",
+  "pdf_pages": 39,
+  "figure_captions": 18,
+  "references": 18,
+  "measured_at": "2026-11-22",
+  "public_render_checked_at": "2026-11-24",
+  "public_render_pdf_pages": 39
+}

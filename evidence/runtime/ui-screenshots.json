@@ -1,0 +1,50 @@
+{
+  "status": "verified_local_runtime_screenshots",
+  "captured_at": "2026-11-22T10:57:00Z",
+  "application_url": "http://127.0.0.1:18080/",
+  "backend": {
+    "port": 18080,
+    "database": "runtime/m09-thesis.sqlite",
+    "model_version": "weighted-xgboost-mi-v1"
+  },
+  "browser": {
+    "name": "Google Chrome",
+    "version": "Google Chrome 158.0.8127.37",
+    "viewport": "1440x1000",
+    "headless": true
+  },
+  "seeded_input": {
+    "fruit": "Tomato",
+    "temp": 30,
+    "humid": 95,
+    "light": 10,
+    "co2": 900,
+    "source": "Dataset.csv 第1条记录"
+  },
+  "screenshots": [
+    {
+      "path": "thesis/figures/ui-screenshots/fig4_2_ui_overview.png",
+      "function": "总览"
+    },
+    {
+      "path": "thesis/figures/ui-screenshots/fig4_3_ui_records.png",
+      "function": "传感器记录浏览"
+    },
+    {
+      "path": "thesis/figures/ui-screenshots/fig4_4_ui_predict.png",
+      "function": "风险预测结果"
+    },
+    {
+      "path": "thesis/figures/ui-screenshots/fig4_5_ui_alerts.png",
+      "function": "预警记录"
+    },
+    {
+      "path": "thesis/figures/ui-screenshots/fig4_6_ui_experiments.png",
+      "function": "模型指标"
+    }
+  ],
+  "limitations": [
+    "本机浏览器截图，不等同Windows或学校平台验收",
+    "使用本地SQLite演示记录和仓库固定模型；不代表生产数据"
+  ]
+}

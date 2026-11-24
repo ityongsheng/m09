@@ -1,0 +1,16 @@
+{
+  "dataset_id": "czz68d9fwj",
+  "version": 1,
+  "title": "A Multi-Parameter Dataset for Machine Learning Based Fruit Spoilage Prediction in an IoT-Enabled Cold Storage System",
+  "doi": "10.17632/czz68d9fwj.1",
+  "landing_page": "https://data.mendeley.com/datasets/czz68d9fwj/1",
+  "file_name": "Dataset.csv",
+  "file_id": "d3fd328b-8b98-4bed-a423-7af706c1da21",
+  "download_url": "https://data.mendeley.com/public-files/datasets/czz68d9fwj/files/d3fd328b-8b98-4bed-a423-7af706c1da21/file_downloaded",
+  "license": "CC BY 4.0",
+  "sha256": "218f76f061a12b0a38c55107e5be3b377e9eecb33f1a1840ef2b4e4618a5e5aa",
+  "has_timestamp": false,
+  "source_columns": ["Fruit", "Temp", "Humid (%)", "Light (Fux)", "CO2 (pmm)", "Class"],
+  "label_mapping": {"Good": 0, "Bad": 1},
+  "retrieved_at_utc": "2026-11-22"
+}

@@ -1,0 +1,87 @@
+{
+  "config": {
+    "target_column": "label",
+    "categorical_columns": [
+      "fruit"
+    ],
+    "test_size": 0.2,
+    "random_state": 20261122,
+    "mi_epsilon": 1e-06,
+    "threshold": 0.5,
+    "n_estimators": 160,
+    "max_depth": 4,
+    "learning_rate": 0.08,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9
+  },
+  "split": {
+    "train_rows": 8796,
+    "test_rows": 2199,
+    "total_rows": 10995
+  },
+  "mi_scores": {
+    "fruit=Banana": 0.0013323283368458227,
+    "fruit=Orange": 0.0,
+    "fruit=Pineapple": 0.001648747292760433,
+    "fruit=Tomato": 0.002248536783443944,
+    "temp": 0.18153011493514448,
+    "humid": 0.20631911829956517,
+    "light": 0.3359219949348091,
+    "co2": 0.13740913344389094,
+    "label_name": 0.0
+  },
+  "selected_features": [
+    "fruit=Tomato",
+    "temp",
+    "humid",
+    "light",
+    "co2"
+  ],
+  "feature_weights": {
+    "fruit=Tomato": 0.013026687900606413,
+    "temp": 1.0512160529728745,
+    "humid": 1.1947649882790206,
+    "light": 1.9452733762162955,
+    "co2": 0.7957188946312028
+  },
+  "metrics": {
+    "baseline": {
+      "accuracy": 0.9990904956798545,
+      "precision": 0.99906191369606,
+      "recall": 0.99906191369606,
+      "f1": 0.99906191369606,
+      "roc_auc": 0.9999966881330841,
+      "mse": 0.0008006541174836457,
+      "mae": 0.004032186232507229,
+      "r2": 0.9967944025993347
+    },
+    "weighted": {
+      "accuracy": 0.9986357435197817,
+      "precision": 0.9971936389148737,
+      "recall": 1.0,
+      "f1": 0.9985948477751756,
+      "roc_auc": 0.9999983440665421,
+      "mse": 0.0011298557510599494,
+      "mae": 0.0055021801963448524,
+      "r2": 0.9954763650894165
+    }
+  },
+  "target_mapping": {
+    "Good": 0,
+    "Bad": 1
+  },
+  "metric_roles": {
+    "primary": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "roc_auc"
+    ],
+    "auxiliary": [
+      "mse",
+      "mae",
+      "r2"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{"input_rows": 10995, "output_rows": 10995}
+Found 1 items
+-rw-r--r--   1 liyongsheng supergroup     385517 2026-11-22 15:15 /m09/cold-storage/raw/Dataset.csv
+Found 2 items
+-rw-r--r--   1 liyongsheng supergroup     473472 2026-11-22 15:15 /m09/cold-storage/processed/cleaned_dataset.csv
+-rw-r--r--   1 liyongsheng supergroup        695 2026-11-22 15:15 /m09/cold-storage/processed/schema.json

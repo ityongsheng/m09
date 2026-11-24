@@ -1,0 +1,61 @@
+{
+  "source": {
+    "path": "data/raw/Dataset.csv",
+    "sha256": "218f76f061a12b0a38c55107e5be3b377e9eecb33f1a1840ef2b4e4618a5e5aa",
+    "has_timestamp": false,
+    "source_columns": [
+      "Fruit",
+      "Temp",
+      "Humid (%)",
+      "Light (Fux)",
+      "CO2 (pmm)",
+      "Class"
+    ]
+  },
+  "canonical_columns": [
+    "fruit",
+    "temp",
+    "humid",
+    "light",
+    "co2",
+    "label",
+    "label_name"
+  ],
+  "label_mapping": {
+    "Good": 0,
+    "Bad": 1
+  },
+  "numeric_ranges": {
+    "temp": [
+      -50.0,
+      80.0
+    ],
+    "humid": [
+      0.0,
+      100.0
+    ],
+    "light": [
+      0.0,
+      1000000.0
+    ],
+    "co2": [
+      0.0,
+      100000.0
+    ]
+  },
+  "stats": {
+    "input_rows": 10995,
+    "output_rows": 10995
+  },
+  "fruit_counts": {
+    "Orange": 3330,
+    "Pineapple": 2257,
+    "Banana": 1667,
+    "Tomato": 3741
+  },
+  "label_counts": {
+    "Good": 5667,
+    "Bad": 5328
+  },
+  "output_sha256": "718710ad28386d6cc122097b2f9d9419407f113dda291bea4193376df42c91fb"
+}

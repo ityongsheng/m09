@@ -1,0 +1,44 @@
+Configured Capacity: 494384795648 (460.43 GB)
+Present Capacity: 17629052928 (16.42 GB)
+DFS Remaining: 17629048832 (16.42 GB)
+DFS Used: 4096 (4 KB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Badly Distributed Blocks: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Badly Distributed Blocks: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+Hostname: 192.168.1.160
+Decommission Status : Normal
+Configured Capacity: 494384795648 (460.43 GB)
+DFS Used: 4096 (4 KB)
+Non DFS Used: 476755742720 (444.01 GB)
+DFS Remaining: 17629048832 (16.42 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 3.57%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Nov 22 15:15:07 CST 2026
+Last Block Report: Sun Nov 22 15:15:04 CST 2026
+Num of Blocks: 0
+
+

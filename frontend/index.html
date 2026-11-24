@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>冷库传感器损耗预警</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">M09</div>
+    <div>
+      <p class="eyebrow">生鲜仓储风险控制台</p>
+      <h1>冷库传感器记录损耗预警</h1>
+    </div>
+    <div class="health-pill" id="health-pill"><span class="dot"></span><span id="health-text">正在连接</span></div>
+  </header>
+
+  <main class="shell">
+    <section class="hero panel">
+      <div>
+        <p class="eyebrow">真实记录 · 可追溯预测</p>
+        <h2>从环境记录到风险提示</h2>
+        <p class="hero-copy">浏览冷库传感器记录，提交一条真实记录进行预测，并追踪历史预警。页面只展示后端返回的数据，接口不可用时会明确提示。</p>
+      </div>
+      <div class="hero-stat"><span class="stat-label">接口状态</span><strong id="hero-status">检查中</strong><small id="hero-status-detail">GET /api/health</small></div>
+    </section>
+
+    <nav class="tabs" aria-label="主要功能">
+      <button class="tab is-active" data-tab="overview">总览</button>
+      <button class="tab" data-tab="records">传感器记录</button>
+      <button class="tab" data-tab="predict">风险预测</button>
+      <button class="tab" data-tab="alerts">预警记录</button>
+      <button class="tab" data-tab="experiments">模型指标</button>
+    </nav>
+
+    <section class="tab-panel is-active" id="tab-overview">
+      <div class="metric-grid">
+        <article class="metric-card"><span>传感器记录</span><strong id="metric-records">—</strong><small>SQLite 中的已保存记录</small></article>
+        <article class="metric-card"><span>预测次数</span><strong id="metric-predictions">—</strong><small>已完成的模型调用</small></article>
+        <article class="metric-card warn"><span>高风险预警</span><strong id="metric-alerts">—</strong><small>标签为 Bad 的记录</small></article>
+        <article class="metric-card"><span>模型版本</span><strong id="metric-model">—</strong><small>由预测接口返回</small></article>
+      </div>
+      <div class="grid-two">
+        <article class="panel content-card"><div class="section-heading"><div><p class="eyebrow">最近记录</p><h3>最新传感器输入</h3></div><button class="text-button" data-jump="records">查看全部 →</button></div><div id="overview-records" class="table-wrap"><p class="empty">正在加载…</p></div></article>
+        <article class="panel content-card"><div class="section-heading"><div><p class="eyebrow">风险态势</p><h3>最近预警</h3></div><button class="text-button" data-jump="alerts">查看全部 →</button></div><div id="overview-alerts" class="alert-list"><p class="empty">正在加载…</p></div></article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-records">
+      <div class="panel content-card"><div class="section-heading"><div><p class="eyebrow">数据浏览</p><h2>传感器记录</h2></div><button class="button secondary" id="refresh-records">刷新</button></div><div id="records-table" class="table-wrap"><p class="empty">正在加载…</p></div></div>
+    </section>
+
+    <section class="tab-panel" id="tab-predict">
+      <div class="grid-two predict-layout">
+        <article class="panel content-card"><div class="section-heading"><div><p class="eyebrow">模型调用</p><h2>提交一条记录</h2></div></div><form id="predict-form" class="form-grid">
+          <label>水果类型<select name="fruit" id="fruit"><option value="">请选择</option><option>Orange</option><option>Pineapple</option><option>Banana</option><option>Tomato</option></select></label>
+          <label>温度 °C<input name="temp" type="number" step="any" required></label>
+          <label>湿度 %<input name="humid" type="number" step="any" required></label>
+          <label>光照 Lux<input name="light" type="number" step="any" required></label>
+          <label>二氧化碳 ppm<input name="co2" type="number" step="any" required></label>
+          <label class="wide">来源说明<input name="source" maxlength="120" placeholder="例如：Dataset.csv 第 1 条记录"></label>
+          <div class="wide form-actions"><button class="button" type="submit">执行预测</button><span class="form-message" id="predict-message"></span></div>
+        </form></article>
+        <article class="panel content-card result-card" id="prediction-result"><p class="eyebrow">预测结果</p><h3>等待输入</h3><p class="empty">提交记录后，这里会显示模型标签、风险概率和预警信息。</p></article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-alerts">
+      <div class="panel content-card"><div class="section-heading"><div><p class="eyebrow">风险追踪</p><h2>预警记录</h2></div><button class="button secondary" id="refresh-alerts">刷新</button></div><div id="alerts-table" class="table-wrap"><p class="empty">正在加载…</p></div></div>
+    </section>
+
+    <section class="tab-panel" id="tab-experiments">
+      <div class="panel content-card"><div class="section-heading"><div><p class="eyebrow">实验记录</p><h2>模型指标</h2></div><button class="button secondary" id="refresh-experiments">刷新</button></div><div id="experiments-table" class="table-wrap"><p class="empty">正在加载…</p></div></div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <footer>m09 · 数据与指标以本地后端实际返回为准</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>

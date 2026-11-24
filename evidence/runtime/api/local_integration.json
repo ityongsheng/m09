@@ -1,0 +1,22 @@
+{
+  "environment": {
+    "os": "macOS",
+    "java": "17.0.12",
+    "spring_boot": "3.3.5",
+    "port": 18080,
+    "database": "SQLite",
+    "model_runner": "ml/model_runner.py via scripts/run_model.sh"
+  },
+  "checks": [
+    {"request": "GET /api/health", "status": 200, "result": "status=ok"},
+    {"request": "GET /", "status": 200, "result": "static Web 页面返回"},
+    {"request": "POST /api/records", "status": 200, "result": "记录写入 SQLite"},
+    {"request": "POST /api/predict", "status": 200, "result": "Bad / risk_probability=0.60024434 / alert=HIGH"},
+    {"request": "GET /api/predictions", "status": 200, "result": "预测历史可读"},
+    {"request": "GET /api/alerts", "status": 200, "result": "高风险预警可读"}
+  ],
+  "limitations": [
+    "本机联调不等同于 Windows x64 原生验收",
+    "指标来自固定训练/测试切分，不代表生产准确率"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "profile": "河北工业职业技术大学规则草案.v1.0",
+  "status": "publisher_metadata_checked_cnki_vip_pending",
+  "note": "18 条文献均已按 J/D 类型整理并保留 DOI 或机构库入口；提交前仍需按学校工作包在 CNKI/维普逐条核对收录状态。",
+  "references": [
+    {
+      "no": 1,
+      "type": "J",
+      "year": 2026,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1111/1750-3841.70871"
+    },
+    {
+      "no": 2,
+      "type": "J",
+      "year": 2026,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1111/1750-3841.70945"
+    },
+    {
+      "no": 3,
+      "type": "J",
+      "year": 2025,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1016/j.foodcont.2025.111174"
+    },
+    {
+      "no": 4,
+      "type": "J",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1016/j.cej.2024.150739"
+    },
+    {
+      "no": 5,
+      "type": "J",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.7717/peerj-cs.2510"
+    },
+    {
+      "no": 6,
+      "type": "J",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.29207/resti.v8i1.5226"
+    },
+    {
+      "no": 7,
+      "type": "J",
+      "year": 2023,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1016/j.foodcont.2023.109976"
+    },
+    {
+      "no": 8,
+      "type": "J",
+      "year": 2023,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1016/j.tifs.2023.02.010"
+    },
+    {
+      "no": 9,
+      "type": "J",
+      "year": 2023,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1016/j.jfoodeng.2023.111518"
+    },
+    {
+      "no": 10,
+      "type": "J",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1016/j.crfs.2023.100656"
+    },
+    {
+      "no": 11,
+      "type": "J",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.32604/cmc.2023.043369"
+    },
+    {
+      "no": 12,
+      "type": "J",
+      "year": 2023,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.3390/s23167081"
+    },
+    {
+      "no": 13,
+      "type": "J",
+      "year": 2001,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1214/aos/1013203451"
+    },
+    {
+      "no": 14,
+      "type": "J",
+      "year": 2004,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.1103/PhysRevE.69.066138"
+    },
+    {
+      "no": 15,
+      "type": "D",
+      "year": 2023,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://hdl.handle.net/11581/484285"
+    },
+    {
+      "no": 16,
+      "type": "D",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://livrepository.liverpool.ac.uk/3183538/"
+    },
+    {
+      "no": 17,
+      "type": "D",
+      "year": 2024,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://doi.org/10.5075/epfl-thesis-10803"
+    },
+    {
+      "no": 18,
+      "type": "D",
+      "year": 2026,
+      "verification": "publisher_or_institutional_repository_checked",
+      "source": "https://researchportal.port.ac.uk/en/studentTheses/application-of-explainable-artificial-intelligence-and-generative/"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+   10996 data/raw/Dataset.csv
+   10996 evidence/hadoop/run/raw_from_hdfs.csv
+   10996 data/processed/cleaned_dataset.csv
+   32988 total

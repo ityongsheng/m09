@@ -1,0 +1,22 @@
+.venv/
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+*.sqlite
+*.db
+.env
+backend/target/
+frontend/node_modules/
+dist/*.zip
+dist/local-model-exe/
+dist/windows-model-exe/
+build/
+*.spec
+artifacts/model/*.bin
+# The reviewed model artifact is versioned for the local/offline prototype;
+# temporary experiment checkpoints remain ignored by their own names.
+artifacts/model/*.bin
+!evidence/hadoop/run/*.log
+
+.hadoop/

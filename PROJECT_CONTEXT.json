@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "m09",
+  "topic": "基于 Hadoop 与 XGBoost 的生鲜仓储传感器记录损耗预测系统的设计与实现",
+  "status": "core-implementation-hadoop-and-model-exe-verified",
+  "environment_policy": {
+    "source": "projectSkill/SKILL.md",
+    "version": "v1.0",
+    "status": "partially-verified",
+    "notes": [
+      "macOS Python、Spring Boot、SQLite 和静态 Web 已联调",
+      "Hadoop 3.5.0 单节点 HDFS 实机链路已验证",
+      "仅验证 Windows x64 模型运行器 EXE；全应用离线包按用户要求未制作"
+    ]
+  },
+  "keywords": [
+    "Hadoop",
+    "HDFS",
+    "互信息",
+    "XGBoost",
+    "冷库",
+    "传感器记录",
+    "SQLite",
+    "Web预警"
+  ],
+  "required_stack": [
+    "Python",
+    "Hadoop/HDFS",
+    "Spring Boot",
+    "SQLite"
+  ],
+  "sources": [
+    {
+      "path": "3-开题报告.docx",
+      "sha256": "7b8d40c22c5c2bcc31ebd76e8ea59785a14eb654e9af89b3616b2721b8b2a8cb",
+      "repository": "ityongsheng/m09-private-backup",
+      "availability": "private original, owner login required"
+    }
+  ],
+  "pointers": {
+    "requirements": [
+      "evidence/requirements/README.md",
+      "PLAN.md"
+    ],
+    "implementation": [
+      "pipeline/etl",
+      "ml",
+      "backend",
+      "frontend"
+    ],
+    "verification": [
+      "tests",
+      "evidence/runtime",
+      "evidence/tests",
+      "evidence/delivery"
+    ],
+    "delivery": [
+      "dist",
+      "start.cmd",
+      "stop.cmd",
+      "launcher.json",
+      "evidence/delivery"
+    ],
+    "thesis": [
+      "thesis/毕业设计说明书_m09_草稿.md",
+      "evidence/models/metrics.json"
+    ]
+  },
+  "publication": {
+    "scope": "public sanitized source snapshot",
+    "private_backup": "ityongsheng/m09-private-backup",
+    "date": "2026-11-24"
+  }
+}

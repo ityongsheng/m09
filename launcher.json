@@ -1,0 +1,9 @@
+{
+  "project": "m09",
+  "kind": "pending",
+  "entries": [],
+  "start_wait_seconds": 15,
+  "stop_wait_seconds": 30,
+  "ready_url": "http://127.0.0.1:8080/api/health",
+  "missing_message": "尚未生成 Windows x64 离线运行包。请先完成 Java 后端与模型运行时的原生打包，再更新 launcher.json。"
+}
